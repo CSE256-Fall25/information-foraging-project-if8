@@ -109,3 +109,8 @@ main hr {
     background-color: #eee;
     height: 1px;
 }
+
+.sticky{
+    position: sticky;
+    top:0;
+}
