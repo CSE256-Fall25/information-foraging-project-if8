@@ -20,3 +20,25 @@ main li {
     list-style-type: disc;
     margin-bottom: 15px;
 }
+
+a.download:link,
+a.download:visited {
+  color: #a51417;
+  text-decoration: underline; /* optional */
+}
+
+a.download:hover,
+a.download:active {
+  color: #a51417;
+  text-decoration: underline; /* optional */
+}
+
+a[href="files/enroll.html"]:link,
+a[href="files/enroll.html"]:visited {
+  color: #a51417;
+}
+
+a[href="files/developmental.html"]:link,
+a[href="files/developmental.html"]:visited {
+  color: #a51417;
+}
