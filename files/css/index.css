@@ -113,8 +113,19 @@ main hr {
 #sticky{
     position: sticky;
     top:0;
+    z-index: 1000;
 }
 
 header{
     overflow: visible;
+    z-index: 1000;
+}
+
+#dropdown-content{
+    z-index: 1000;
+    background-color: white;
+}
+
+#subnav{
+    z-index: 1;
 }
