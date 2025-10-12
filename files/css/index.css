@@ -129,3 +129,7 @@ header{
 #subnav{
     z-index: 1;
 }
+
+.individual-staff-member {
+  scroll-margin-top: -200px; 
+}
