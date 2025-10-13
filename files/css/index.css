@@ -121,15 +121,3 @@ header{
     z-index: 1000;
 }
 
-#dropdown-content{
-    z-index: 1000;
-    background-color: white;
-}
-
-#subnav{
-    z-index: 1;
-}
-
-.individual-staff-member {
-  scroll-margin-top: 0px; 
-}

@@ -97,3 +97,30 @@ main h4 a {
     background-color: #a51417;
     text-align: center;
 }
+
+.individual-staff-member {
+  scroll-margin-top: 0px; 
+}
+
+#dropdown-content{
+    z-index: 1000;
+    background-color: white;
+}
+
+#subnav{
+    z-index: 1;
+}
+
+button.teacher-btn{
+    background-color: #fff;
+    border: none;
+    color: #a51417;
+    text-decoration: underline;
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 37px;
+}
+
+button.teacher-btn:hover{
+    color: rgb(211, 51, 54);
+}
