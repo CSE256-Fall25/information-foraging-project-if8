@@ -6,7 +6,7 @@
     color: rgb(208, 28, 41);
     cursor: pointer;
     font-family: "Libre Baskerville", "Times New Roman", serif;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 700;
     letter-spacing: 0.25px;
     line-height: 28px;
@@ -16,7 +16,7 @@
 .announcements p {
     color: rgb(99, 99, 99);
     font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 16px;
+    font-size: 25px;
     font-style: italic;
     line-height: 23px;
     margin-bottom: 1em;
