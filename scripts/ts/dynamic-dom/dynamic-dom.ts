@@ -28,3 +28,66 @@ itemsToCache.forEach((item: HTMLContent) => {
 console.log('dynamic-dom loaded');
 // Do not touch this line, needed to reinitialize code in the dynamic-dom.ts setupAll function
 window.addEventListener('newPageLoad', () => setupAll());
+
+window.jumpToStaff = function(targetId) {
+  console.log("Button clicked, target:", targetId);
+  sessionStorage.setItem("scrollTarget", targetId);
+
+  const staffNav = document.querySelector('a[href*="staff.html"]');
+  if (staffNav) {
+    staffNav.click();
+  } else {
+    console.warn("Staff nav link not found.");
+  }
+}
+
+function scrollToElement(targetId) {
+  const el = document.getElementById(targetId);
+  if (!el) return false;
+
+  console.log("Scrolling to:", targetId);
+  
+  el.scrollIntoView({ 
+    behavior: "smooth", 
+    block: "start", 
+    inline: "nearest"   
+  });
+  
+  return true;
+}
+
+function checkAndScroll() {
+  const targetId = sessionStorage.getItem("scrollTarget");
+  if (targetId) {
+    if (scrollToElement(targetId)) {
+      sessionStorage.removeItem("scrollTarget");
+    } else {
+      let attempts = 0;
+      const interval = setInterval(() => {
+        attempts++;
+        if (scrollToElement(targetId) || attempts > 10) {
+          sessionStorage.removeItem("scrollTarget");
+          clearInterval(interval);
+        }
+      }, 300);
+    }
+  }
+}
+
+window.addEventListener("DOMContentLoaded", checkAndScroll);
+window.addEventListener("load", checkAndScroll);
+
+const observer = new MutationObserver(() => {
+  const targetId = sessionStorage.getItem("scrollTarget");
+  if (targetId && document.getElementById(targetId)) {
+    checkAndScroll();
+  }
+});
+
+if (document.body) {
+  observer.observe(document.body, { childList: true, subtree: true });
+} else {
+  window.addEventListener("DOMContentLoaded", () => {
+    observer.observe(document.body, { childList: true, subtree: true });
+  });
+}
