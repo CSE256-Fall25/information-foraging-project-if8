@@ -124,3 +124,17 @@ button.teacher-btn{
 button.teacher-btn:hover{
     color: rgb(211, 51, 54);
 }
+
+.class-first-section{
+    display: flex;
+}
+
+.class-description{
+    width: 50%;
+}
+#small-image-collection{
+    width: 50%;
+}
+#small-image-collection img{
+    object-fit: cover;
+}
