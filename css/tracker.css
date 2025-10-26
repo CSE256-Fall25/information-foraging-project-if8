@@ -232,3 +232,13 @@ span {
     width: 90%;
     border: none;
 }
+
+.handbook-section h3 {
+    font-size: 1.6rem;       /* slightly larger than body text */
+    font-weight: 700;        /* bold */
+    color: #2a4d69;          /* a darker, standout color */
+    margin-top: 2rem;        /* space above header */
+    margin-bottom: 1rem;     /* space below header */
+    border-bottom: 2px solid #2a4d69; /* optional underline */
+    padding-bottom: 0.3rem;  /* space between text and underline */
+}
