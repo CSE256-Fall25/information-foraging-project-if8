@@ -138,3 +138,7 @@ button.teacher-btn:hover{
 #small-image-collection img{
     object-fit: cover;
 }
+
+.announcements strong{
+    font-size: 18.4px;
+}
